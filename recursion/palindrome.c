@@ -4,18 +4,19 @@
 
 int palindrome_string(char s[], int first, int last)
 {
-    int length = strlen(s);
-    first = 0;
-    last = length -1;
     if(first >= last)
     {
-        return 1;
+        return 0;
     }
-    else if(s[first] == s[last])
+
+    if(s[first] == s[last])
     {
         return palindrome_string(s,first+1, last-1);
     }
-    return 0;
+    else
+    {
+        return 1;
+    }
 }
 int main(void)
 {
